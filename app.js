@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 443;
-const HOSTNAME = process.env.HOST || 'localhost';
 const basicAuth = require('express-basic-auth');
 const fs = require('fs');
 
@@ -34,8 +33,7 @@ app.get("/items", function(req, res) {
     }
 })
 
-app.listen(PORT, HOSTNAME, function() {
-    console.log("Server attivo sull'Hostname " + HOSTNAME);
+app.listen(PORT, function() {
     console.log('Server attivo sulla porta ' + PORT);
 });
 
