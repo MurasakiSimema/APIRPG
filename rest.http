@@ -1,0 +1,9 @@
+GET http://localhost:3300/items
+?lv=2
+Authorization: Basic username password1
+
+###
+
+GET http://localhost:3300/items
+?lv=6
+Authorization: Basic username password1
