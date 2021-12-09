@@ -18,6 +18,10 @@ InizializzaJson();
 app.use(express.urlencoded({
     extended: true
 }));
+app.get("/", function(req,res){
+    console.log("Connessione da parte di un client");
+    res.send("vai su /items");
+})
 
 app.get("/items", function(req, res) {
     console.log("Connessione da parte di un client");
